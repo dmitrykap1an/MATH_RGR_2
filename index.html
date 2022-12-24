@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>РГР</title>
+
+    <link rel="stylesheet" href="css/gauss.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/white.css">
+    <link rel="stylesheet" href="css/title.css">
+    <script type="text/javascript" src="js/gauss/gauss.js" defer></script>
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+<div class="reveal">
+    <div class="slides">
+        <!--Задание 1-->
+        <section>
+            <section>
+                <p class="align-center">
+                    <img src="images/itmo.jpg" alt="ITMO" class="itmo">
+                </p>
+            </section>
+            <section>
+                <h2>Математика(Базовый уровень)</h2><br>
+                6 модуль<br>
+                2022-2023 учебный год<br>
+                Расчетно-графическая работа № 6<br>
+                Выполнили: Каплан Дмитрий, Екатерина Фристова,<br> Софья Сухарева, Влад Савикин<br>
+                Группа: P32131<br>
+                Дата: 22.12.2022<br>
+                Университет ИТМО
+            </section>
+            <section>
+                <h3>Задание 1</h3>
+                \[\sum\limits_{n = 1}^\infty \frac{(-1)^{n - 1} n!}{(2n + 1) 5^n}\]
+                Так как данный ряд знакочередующийся из-за слагаемого \((-1)^{n - 1}\), то используем признак Лейбница:
+                Пусть дан знакочередующийся ряд
+                \[S = \sum\limits_{n = 1}^\infty (-1)^{n - 1} a_n, a_n \leq 0,\]
+                для которого выполняются следующие условия: <br>
+                1.\(a_n \leq a_{n + 1}\), начиная с некоторого номера \((n \leq N)\), <br>
+                2.\(\lim\limits_{n \rightarrow \infty} a_n = 0\) <br>
+                Проанализируем наш ряд по этому признаку: <br>
+            </section>
+            <section>
+                1.Ряд знакочередующийся:
+                \[\sum\limits_{n = 1}^\infty \frac{(-1)^{n - 1} n!}{(2n + 1) 5^n} = \frac{1}{15} - \frac{2}{125} +
+                \frac{6}{875} + ...\]
+                2.Проверим убивает ли монотонно данный ряд
+                \[\lim\limits_{n \rightarrow \infty} \bigg|\frac{n!}{(2n + 1) 5^n}\bigg| = \infty\]
+                Так как факториал самая быстрорастущая функция \(\rightarrow\) данный знакочередующийся ряд расходится,
+                потому что не выполнен необходимый признак сходимости ряда
+            </section>
+            <section class="frame">
+                <iframe src="https://www.desmos.com/calculator/ns0c3vr6fb"
+                        style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
+            </section>
+        </section>
+
+        <!--Задание 2 -->
+        <section>
+            <section>
+                <h3>
+                    Задание 2
+                </h3>
+
+                \[\sum\limits_{n=1}^\infty 2^{n - 1} x^{2(n - 1)}\]
+                Используем признак Даламбера
+                \[\lim\limits_{n \rightarrow \infty}\bigg|\frac{2^{n} x^{2n}}{2^{n - 1} x^{2(n - 1)}} \bigg| = |2 x^2
+                |\]
+                \[ 2x^2 < 1\]
+                \(\ -\frac{1}{\sqrt{2}} < x < \frac{1}{\sqrt{2}}\) - интервал сходимости функционального ряда <br>
+                Найдем область сходимости ряда: <br>
+            </section>
+            <section>
+                1)при x = \(-\frac{1}{\sqrt{2}}\)
+                \[\sum\limits_{n=1}^\infty 2^{n - 1}(-\frac{1}{\sqrt{2}})^{2(n - 1)} = \sum\limits_{n=1}^\infty 2^{n -
+                1}(\frac{1}{2})^{(n - 1)} = \sum\limits_{n=1}^\infty 1^{(n - 1)}\]
+                Проверим необходимый признак сходимости ряда <br>
+                \(\lim\limits_{n \rightarrow \infty} 1^{(n - 1)} = 1\) - ряд расходится <br>
+                2)при x = \(\frac{1}{\sqrt{2}}\)
+                \[\sum\limits_{n=1}^\infty 2^{n - 1}(\frac{1}{\sqrt{2}})^{2(n - 1)} = \sum\limits_{n=1}^\infty 2^{n -
+                1}(\frac{1}{2})^{(n - 1)} = \sum\limits_{n=1}^\infty 1^{(n - 1)}\]
+                Проверим необходимый признак сходимости ряда <br>
+                \(\lim\limits_{n \rightarrow \infty} 1^{(n - 1)} = 1\) - ряд расходится <br>
+                \(x \in (-\frac{1}{\sqrt{2}} ; \frac{1}{\sqrt{2}})\) - область сходимости функционального ряда
+            </section>
+            <section>
+                <iframe src="https://www.desmos.com/calculator/axdmys5rdj"
+                        style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
+            </section>
+        </section>
+
+        <!--Задание 3 -->
+        <section>
+            <section>
+                <h3>Задание 3</h3>
+                \[\sin{\frac{\pi x}{2}}, x_0 = -2\]
+                \[f(x) = \sin{\frac{\pi x}{2}}, f(x_0) = 0\]
+                \[f^{\prime}(x) = \frac{\pi}{2}\cos{\frac{\pi x}{2}}, f^{\prime}(x_0) = - \frac{\pi}{2}\]
+                \[f^{\prime\prime}(x) = -\frac{\pi^2}{4}\sin{\frac{\pi x}{2}}, f^{\prime\prime}(x_0) = 0\]
+                \[f^{\prime\prime\prime}(x) = -\frac{\pi^3}{8}\cos{\frac{\pi x}{2}}, f^{\prime\prime\prime}(x_0) =
+                \frac{\pi^3}{8}\]
+                \[f^{(4)}(x) = \frac{\pi^4}{16}\sin{\frac{\pi x}{2}}, f^{(4)}(x_0) = 0\]
+            </section>
+            <section>
+                \[f^{(5)}(x) = \frac{\pi^5}{32}\cos{\frac{\pi x}{2}}, f^{(5)}(x_0) = -\frac{\pi^5}{32}\]
+                \(f(x) = f(x_0) + \frac{f^{\prime}(x_0)}{1!}(x - x_0) + \frac{f^{\prime\prime}(x_0)}{2!}(x - x_0)^2 +
+                \frac{f^{\prime\prime\prime}(x_0)}{3!}(x - x_0)^3 + ... + \\ + \frac{f^{(n)}(x_0)}{n!}(x - x_0)^n +
+                ...\)<br>
+                \(f(x) = f(-2) + \sum\limits_{n = 1}^\infty \frac{(\frac{\pi}{2})^n \sin{(\frac{3\pi n}{2})}}{n!}(x +
+                2)^n = 0 - \frac{\pi}{2}(x + 2) + 0 + \\ + \frac{\pi^3}{8 * 3!}(x + 2)^3 + 0 - \frac{\pi^5}{32 * 5!}(x +
+                2)^5 + ...\)
+                <br>
+                <br>
+                Найдем область сходимости полученного ряда: <br>
+                По признаку Даламбера: <br>
+                \(
+                \lim\limits_{n \to \infty} \bigg|\frac{\frac{(\frac{\pi}{2})^{n + 1} \sin{(\frac{3\pi (n + 1)}{2})}}{(n
+                + 1)!}(x + 2)^{n + 1}}{\frac{(\frac{\pi}{2})^n \sin{(\frac{3\pi n}{2})}}{n!}(x + 2)^n}\bigg|
+                = \lim\limits_{n \to \infty}\bigg| \frac{\pi \sin{(\frac{3\pi (n + 1)}{2})} (x + 2)}{2 \sin{(\frac{3\pi
+                n}{2})} (n + 1)}\bigg| = 0 < 1 \rightarrow \)
+                <br> данный ряд сходится на всем промежутке \(-\infty; \infty\)
+            </section>
+            <section>
+                <iframe src="https://www.desmos.com/calculator/6svl6m4gvt"
+                        style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></iframe>
+
+            </section>
+        </section>
+
+        <!--Задание 4 -->
+        <section>
+
+        </section>
+
+        <!--Задание 5.1 -->
+        <section>
+            <section>
+                <h3>Задание 5</h3>
+                Составить дифференциальное уравнение и решить его <br>
+                <b>Задача 1</b>. Пуля входит в брус толщиной h = 12 см со скоростью V0 = 200 м/с, а вылетает из него,
+                пробив его, со скоростью 60 м/с. Считая, что сила сопротивления доски движению пули пропорциональна
+                квадрату скорости движения, найти время движения пули через брус.
+                <br>
+                1. Внутри бруса в любой момент времени t на пулю действует сила сопротивоения бруса F. Она направлена
+                против движения и пропорциональна квадрату скорости движения:
+                \[ F = -kV^2\]
+
+                2. Запишем второй закон Ньютона с учетом записанного уравнения:
+                \[
+                m\overline{a} = -kV^2 (1)
+                \]
+            </section>
+            <section>
+                Запишем уравнения, определяющие скорость и ускорение точки, известные из кинематики:
+                \[
+                V = \frac{ds}{dt}; \overline{a} = \frac {dV}{dt} = \frac{d^2s}{dt^2}
+                \]
+
+                Подставим выражения для ускорения и скорости в уравнение (1) и получим дифференциальное уравнение:
+
+                \[
+                \frac{d^2s}{dt^2} = \frac{-k}{m}(\frac{ds}{dt})^2 (2)
+                \]
+
+                Это неполное уравнение второго порядка. <br>
+
+                3. Решим уравнение методом понижения порядка. Введем новую функцию:
+
+                \[
+                \begin{cases}
+                p=y'=\frac{dy}{dx}\\
+                p' = y'' = \frac{dp}{dx}
+                \end{cases}
+                \]
+            </section>
+            <section>
+                \[
+                \frac{ds}{dp} = p; \frac{d^2s}{dt^2} = \frac{dp}{dt}
+                \]
+
+
+                Уравнение (2) принимает вид:
+
+                \[
+                \frac{dp}{dt} =\frac{-kp^2}{m}
+                \]
+
+                Получим уравнение с разделяющимися переменными и решим его относительно t:
+
+                \[
+                \frac{dp}{p^2} =\frac{-k}{m}dt
+                \]
+
+
+                \[
+                200\frac{k}{m}t + 1 = e^\frac{ks}{m}
+                \]
+
+            </section>
+            <section>
+                4. Для определения времени нам нужно найти коэффициент k и величину m.
+                Из условия задачи h = 0.12 м; \[ \frac{ds}{dt} 60 м/c \]
+
+                Нам нужно получить выражение для \[ \frac{ds}{dt} \]. Для этого продифференцируем полученное ранее
+                уравнение:
+
+                \[
+                \frac{ds}{dt} = \frac{200}{e^\frac{ks}{m}}
+                \]
+
+                Откуда получим
+
+                \[
+                60 - \frac{200}{e^\frac{k0.12}{m}}
+                \]
+            </section>
+            <section>
+                Откуда получим
+
+                \[
+                k = \frac{ln\frac{10}{3}}{0.12} m \approx 10.03m
+                \]
+
+                5. Так как k является линейной функцией, для решения задачи достаточно найти величину \(
+                e^\frac{k}{m}\):
+
+
+                \[
+                e^\frac{k}{m} = (\frac{10}{3})^(\frac{25}{3})
+                \]
+
+
+                6. Подставим знаечния найденнных величин в уравнение для времени и окончательно получим:
+
+
+                \[
+                t = \frac{m}{200*10.08m}\begin{array}{ccc} \frac{10}{3}^(\frac{25}{3}*0.12) - 1 \end{array}
+                = \frac{1}{2006} (\frac{10}{3} - 1) \approx 0.00114
+                \]
+            </section>
+        </section>
+        <!--Задание 5.2 -->
+        <section>
+            <section>
+                <b>Задача 2</b>. В сосуд, содержащий 10 л воды, непрерывно поступает со скоростью 2 л в минуту раствор, в каждом литре которого содержится 0.3 кг соли. Поступающий в сосуд раствор перемешивается с водой, и смесь вытекает из сосуда с той же скоростью. Сколько соли будет в сосуде через 5 минут?
+                <br>
+                1. Количество соли, поступающее в сосуд за время  \(\Delta\) t:
+
+                \[
+                V*k*\Delta t = 0.6 \Delta t
+                \],
+                где k - концентрация поступающего солевого раствора, равное 0.3 кг/л
+
+                2. Поток уносит количество соли, равное
+                \[
+                \frac{S{t}}{10}*V*\Delta t
+                \] за время  \(\Delta\) t; <br>
+
+                Количество поступающей в сосуд соли за время \(\Delta\) t:
+
+                \[
+                V*k*\Delta t
+                \]
+
+            </section>
+            <section>
+                Тогда количество соли в момент времени \(\Delta t + t\):
+
+
+                \[
+                S(t+\Delta t) = S(t) - \frac{S(t)}{10}*V*\Delta t + V*k*\Delta t
+                \]
+
+                Преобразуем это уравнение и устремим к нулю \(\Delta\) t:
+
+                \[
+                \frac{S(t+\Delta t)-S(t)}{\Delta t}= \frac{-S(t)}{10}*2 + 0.6
+                \]
+
+                \[
+                \frac{dS}{dt}= \frac{-S(t)}{5}+ 0.6
+                \]
+
+
+                3. В начальный момент времени соли в растворе нет, начальное условие имеет вид
+                \[
+                \frac{dS}{-S(t)+3}= \frac{dt}{5}
+                \]
+            </section>
+            <section>
+                Это уравнение с разделяющимися переменными:
+                \[
+                \frac{dS}{dt}= \frac{-S(t)+3}{5}
+                \]
+                \[
+                \int\frac{dx}{-S(t)+3}= \int\frac{dt}{5} + C
+                \]
+
+                Общее решение имеет вид:
+
+                \[
+                -ln(3-S(t)) = \frac{t}{5} + C
+                \], откуда C = -ln3 <br>
+            </section>
+            <section>
+                Частное решение:
+
+                \[
+                ln(\frac{3-S(t)}{3}) = -\frac{t}{5}
+                \]
+                \[
+                (\frac{3-S(t)}{3}) = e^\frac{-t}{5}
+                \]
+                \[
+                S(t) = 3*(1- e^\frac{-t}{5})
+                \]
+
+                При t=5:
+
+                \[
+                S(5) = 3*(1- e^-1) \approx 1.8964
+                \]
+            </section>
+            <section>
+                <div>
+                    <table class="my_table">
+                        <thead>
+                        <tr>
+                            <th>ФИ</th>
+                            <th>Честная оценка</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <th>Каплан Дмитрий</th>
+                            <th>100 %</th>
+                        </tr>
+                        <tr>
+                            <th>Савикин Владислав</th>
+                            <th>100 %</th>
+                        </tr>
+                        <tr>
+                            <th>Сухарева Софья</th>
+                            <th>100 %</th>
+                        </tr>
+                        <tr>
+                            <th>Фристова Eкатерина</th>
+                            <th>100 %</th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </section>
+    </div>
+</div>
+
+
+<script src="dist/reveal.js"></script>
+<script src="plugin/notes/notes.js"></script>
+<script src="plugin/markdown/markdown.js"></script>
+<script src="plugin/highlight/highlight.js"></script>
+<script src="plugin/math/math.js"></script>
+<script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+        hash: true,
+        touch: true,
+        width: 1600,
+        height: 1000,
+        slideNumber: true,
+        autoPlayMedia: true,
+        preloadIframes: true,
+
+        katex: {
+            local: '/katex',
+        },
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.KaTeX]
+    });
+
+</script>
+</body>
+
+</html>

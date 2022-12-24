@@ -1,0 +1,86 @@
+.x_button, .y_button, .z_button, .result_button{
+    height: 40px;
+    width: 40px;
+    border-bottom: 1px solid #F4F4F4;
+    border-left: 1px solid #E0E0E0;
+    border-radius: 5px;
+    border-right: 1px solid #E0E0E0;
+    border-top: 1px solid #C0C0C0;
+    box-shadow: 0 1px 1px #C9C9C9 inset;
+}
+
+.input{
+    display: block;
+    text-align: center;
+}
+
+.char{
+    font-family: MJI;
+    font-size: 1.2em;
+    display: inline;
+
+}
+
+.submit{
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    border-radius: 24px;
+    margin-bottom: 2%;
+}
+
+mtd {
+    white-space: nowrap;
+}
+
+mtable {
+    line-height: 1.5em;
+    text-align: center;
+}
+
+mfenced {
+    border-collapse: separate;
+    border-spacing: 0.2ex 0;
+    white-space: nowrap;
+}
+
+.my_table {
+    width: 50%;
+    height: 100px;
+    text-align: center;
+    border-radius: 10px;
+    border-spacing: 0;
+    border-style: solid;
+    border-color: black;
+    overflow: hidden;
+}
+
+.container{
+    margin-left: 25%;
+    background-color: #A9A9A9;
+    width: 50%;
+    text-align: center;
+    border-radius: 10px;
+    border-spacing: 0;
+    border-style: solid;
+    border-color: black;
+    overflow: hidden;
+}
+
+.image{
+    height: 600px;
+    width: 1000px;
+    border-radius: 10px;
+    border-color: black;
+    border-width: medium;
+    border-style: solid;
+}
+
+figcaption{
+    text-align: center;
+    font-size: 5px;!important;
+}
+
+.image_container{
+    display: flex;
+}
